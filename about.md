@@ -1,23 +1,12 @@
----
-layout: page
-title: About the Author
-tags: John McCall, LowlyDBA
-Author: John McCall
----
 
+
+# About the Author
 
 My name is John McCall, but I often use the handle LowlyDBA on sites like [GitHub](http://github.com/lowlyDBA), [Stack Overflow](https://dba.stackexchange.com/users/45616/lowlydba), and my personal site
 [lowlydba.com](http://www.lowlydba.com).
 
-<div style="float: right; padding: 30px; overflow: hidden">
-<a href="https://dba.stackexchange.com/users/45616/lowlydba">
-<img style="display: block; margin: auto" src="https://dba.stackexchange.com/users/flair/45616.png?theme=clean"  width="208" height="58" alt="profile for LowlyDBA at Database Administrators Stack Exchange, Q&amp;A for database professionals who wish to improve their database skills and learn from others in the community" title="profile for LowlyDBA at Database Administrators Stack Exchange, Q&amp;A for database professionals who wish to improve their database skills and learn from others in the community">
-</a>
-<br/>
-<img style="display: block" src="../img/sql-server-affiliations.png" title="Microsoft Certified Professional" alt="Microsoft Certified Professional">
-</div>
 
-I'm a SQL Server DBA who has worked for years with companies ranging from
+I'm a data engineer and former DBA who has worked for years with companies ranging from
 large financial institutions to startup non-profits. My passion is finding ways
 to leverage data to create new and efficient possibilities in software that
 make the world a better place. I am also the owner of Express Databases, LLC which provides SQL Server based consulting services.

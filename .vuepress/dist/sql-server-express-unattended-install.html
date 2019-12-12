@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How Does Unattended Install Work?</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/favicon.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a69eea6.css" as="style"><link rel="preload" href="/assets/js/app.214189df.js" as="script"><link rel="preload" href="/assets/js/2.646f69a8.js" as="script"><link rel="preload" href="/assets/js/18.d9729017.js" as="script"><link rel="prefetch" href="/assets/js/10.8a48ca2b.js"><link rel="prefetch" href="/assets/js/11.9b1dec55.js"><link rel="prefetch" href="/assets/js/12.71c81a42.js"><link rel="prefetch" href="/assets/js/13.88f5b9e8.js"><link rel="prefetch" href="/assets/js/14.98fbd0fc.js"><link rel="prefetch" href="/assets/js/15.da020290.js"><link rel="prefetch" href="/assets/js/16.6e90197a.js"><link rel="prefetch" href="/assets/js/17.0528901f.js"><link rel="prefetch" href="/assets/js/19.b34f5c6a.js"><link rel="prefetch" href="/assets/js/20.28320e3c.js"><link rel="prefetch" href="/assets/js/21.63f95561.js"><link rel="prefetch" href="/assets/js/22.74626d62.js"><link rel="prefetch" href="/assets/js/23.08c5de19.js"><link rel="prefetch" href="/assets/js/3.257e33ce.js"><link rel="prefetch" href="/assets/js/4.27688e2c.js"><link rel="prefetch" href="/assets/js/5.02504f97.js"><link rel="prefetch" href="/assets/js/6.4e17b02f.js"><link rel="prefetch" href="/assets/js/7.d47d8cf4.js"><link rel="prefetch" href="/assets/js/8.6822dab7.js"><link rel="prefetch" href="/assets/js/9.35fadd58.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a69eea6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guides Menu" class="dropdown-title"><span class="title">Guides</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/what-is-sql-server-express/" class="nav-link">What is SQL Server Express?</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-feature-comparison/" class="nav-link">Express vs. Standard vs. Enterprise</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-vs-localdb/" class="nav-link">SQL Express vs. LocalDB</a></li><li class="dropdown-item"><!----> <a href="/which-sql-server-express-version-to-use/" class="nav-link">Which Express Version to Use</a></li><li class="dropdown-item"><!----> <a href="/which-sql-server-management-studio-version/" class="nav-link">Which Management Studio to Use</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Limitations Menu" class="dropdown-title"><span class="title">Limitations</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sql-server-express-database-size-limit/" class="nav-link">Size Restrictions</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-hardware-limitations/" class="nav-link">Hardware Restrictions</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-sp-send-dbmail/" class="nav-link">Missing Database Mail</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Best Practices Menu" class="dropdown-title"><span class="title">Best Practices</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sql-server-express-backups.html" class="nav-link">Backups</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-maintenance/" class="nav-link">Maintenance</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-security-best-practices/" class="nav-link">Security</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Automation Menu" class="dropdown-title"><span class="title">Automation</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sql-server-express-replace-sql-agent/" class="nav-link">Replacing SQL Agent</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-unattended-install/" class="nav-link">Unattended Installation</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Free Tools Menu" class="dropdown-title"><span class="title">Free Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://miscmssql.lowlydba.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Scripts, Apps, and Resources
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spsizeoptimiser.lowlydba.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ExpressSQL Scripts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/azure-data-studio/" class="nav-link">Azure Data Studio</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Author Menu" class="dropdown-title"><span class="title">Author</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/" class="nav-link">About</a></li><li class="dropdown-item"><!----> <a href="/contact/" class="nav-link">Contact</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guides Menu" class="dropdown-title"><span class="title">Guides</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/what-is-sql-server-express/" class="nav-link">What is SQL Server Express?</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-feature-comparison/" class="nav-link">Express vs. Standard vs. Enterprise</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-vs-localdb/" class="nav-link">SQL Express vs. LocalDB</a></li><li class="dropdown-item"><!----> <a href="/which-sql-server-express-version-to-use/" class="nav-link">Which Express Version to Use</a></li><li class="dropdown-item"><!----> <a href="/which-sql-server-management-studio-version/" class="nav-link">Which Management Studio to Use</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Limitations Menu" class="dropdown-title"><span class="title">Limitations</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sql-server-express-database-size-limit/" class="nav-link">Size Restrictions</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-hardware-limitations/" class="nav-link">Hardware Restrictions</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-sp-send-dbmail/" class="nav-link">Missing Database Mail</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Best Practices Menu" class="dropdown-title"><span class="title">Best Practices</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sql-server-express-backups.html" class="nav-link">Backups</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-maintenance/" class="nav-link">Maintenance</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-security-best-practices/" class="nav-link">Security</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Automation Menu" class="dropdown-title"><span class="title">Automation</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sql-server-express-replace-sql-agent/" class="nav-link">Replacing SQL Agent</a></li><li class="dropdown-item"><!----> <a href="/sql-server-express-unattended-install/" class="nav-link">Unattended Installation</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Free Tools Menu" class="dropdown-title"><span class="title">Free Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://miscmssql.lowlydba.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Scripts, Apps, and Resources
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spsizeoptimiser.lowlydba.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ExpressSQL Scripts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/azure-data-studio/" class="nav-link">Azure Data Studio</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Author Menu" class="dropdown-title"><span class="title">Author</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/" class="nav-link">About</a></li><li class="dropdown-item"><!----> <a href="/contact/" class="nav-link">Contact</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>How Does Unattended Install Work?</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sql-server-express-unattended-install.html#how-does-unattended-install-work" class="sidebar-link">How Does Unattended Install Work?</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sql-server-express-unattended-install.html#unattended-installs-for-sql-server-express" class="sidebar-link">Unattended Installs for SQL Server Express</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sql-server-express-unattended-install.html#_2008-2012-2014-unattended-install" class="sidebar-link">2008, 2012, 2014 Unattended Install</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sql-server-express-unattended-install.html#_2016-2017-2019-unattended-install" class="sidebar-link">2016, 2017, 2019 Unattended Install</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sql-server-express-unattended-install.html#_2017-2019-unattended-install-linux" class="sidebar-link">2017, 2019 Unattended Install Linux</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sql-server-express-unattended-install.html#further-reading" class="sidebar-link">Further Reading</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="how-does-unattended-install-work"><a href="#how-does-unattended-install-work" class="header-anchor">#</a> How Does Unattended Install Work?</h2> <p>Automating the installation of SQL Server Express, also known as an
+unattended install, is done by launching the setup process via the command
+line and passing pre-determined parameters so that no human interaction
+is needed to complete the setup. This is ideal for any situation where
+many servers must be provisioned and a requirement when bundling
+SQL Server Express with other software using it as a database.</p> <p>The configuration for the install can be input directly as parameter to
+the setup file:</p> <div class="language-batch line-numbers-mode"><pre class="language-batch"><code><span class="token command"><span class="token keyword">Setup</span>.exe /ACTION=<span class="token string">&quot;Install&quot;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>or passed in via a configuration file:</p> <div class="language-batch line-numbers-mode"><pre class="language-batch"><code><span class="token command"><span class="token keyword">Setup</span>.exe /ConfigurationFile=MyConfigurationFile.INI  </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Using a configuration file makes it easy to store, maintain, and customize the various parameters that may change based on SQL Server version, install type, and target server. For this reason, the below configurations will be provided as template files that can be tailored to any additional needs.</p> <h2 id="unattended-installs-for-sql-server-express"><a href="#unattended-installs-for-sql-server-express" class="header-anchor">#</a> Unattended Installs for SQL Server Express</h2> <p>Installing SQL Server Express from a configuration file has a few differences when
+compared to other versions like Standard and Enterprise. Some of the parameters
+behave slightly differently, do not apply, and come with different default values.
+These examples take those factors into account by having all mandatory fields
+present and optional settings commented out to provide a generic template that can
+be customized as needed.</p> <ul><li><a href="#_2008-2012-2014-unattended-install">SQL Server Express 2008, 2012, 2014 Unattended Install</a> (Windows)</li> <li><a href="#_2016-2017-2019-unattended-install">SQL Server Express 2016, 2017, 2019 Unattended Install</a> (Windows)</li> <li><a href="#_2017-2019-unattended-install-linux">SQL Server Express 2017, 2019 Unattended Install</a> (Linux)</li></ul> <h2 id="_2008-2012-2014-unattended-install"><a href="#_2008-2012-2014-unattended-install" class="header-anchor">#</a> 2008, 2012, 2014 Unattended Install</h2> <p>The configuration parameters change very little over the years, mostly with
+new options being added and very few being modified or removed. Luckily, this
+means that the same configuration file can often be used for multiple version
+installs, as long as the general requirements of each install remain the same.</p> <p>The below sample configuration file focuses solely on the database engine installation
+and does not include other features to keep the configuration as generic as possible.</p> <div class="language-batch line-numbers-mode"><pre class="language-batch"><code>; Microsoft SQL Server Express 2008, 2012, 2014 Configuration Template
+; Provided by Express Databases, LLC
+; http://expressdb.io   
+[OPTIONS]  
+; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE.  
+; This is a required parameter.  
+<span class="token command"><span class="token keyword">ACTION</span>=<span class="token string">&quot;Install&quot;</span>  </span>
+
+; Specifies features to install, uninstall, or upgrade.  
+; The list of top-level features include SQL, AS, RS, IS, and Tools.  
+; The SQL feature will install the database engine, replication, and full-text.  
+; The Tools feature will install Management Tools, Books online,   
+; SQL Server Data Tools, and other shared components.  
+<span class="token command"><span class="token keyword">FEATURES</span>=SQL,Tools  </span>
+
+; Accept license terms
+<span class="token command"><span class="token keyword">IACCEPTSQLSERVERLICENSETERMS</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Install English version if other langauge packs are available
+<span class="token command"><span class="token keyword">ENU</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Don<span class="token punctuation">'</span>t display any install UI
+<span class="token command"><span class="token keyword">QUIET</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Show progress in command line
+<span class="token command"><span class="token keyword">INDICATEPROGRESS</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Define an Instance name
+<span class="token command"><span class="token keyword">INSTANCENAME</span>=<span class="token string">&quot;SQLEXPRESS&quot;</span></span>
+
+; Specify SQL Service account
+<span class="token command"><span class="token keyword">SQLSVCACCOUNT</span>=<span class="token string">&quot;SQLServiceAccount&quot;</span></span>
+
+; Specify SQL Service Account pwd
+<span class="token command"><span class="token keyword">SQLSVCPASSWORD</span>=<span class="token string">&quot;ChangeMe123&quot;</span></span>
+
+; Enable instant file initialization for the service account  
+; Enabling this is a best practice 
+<span class="token command"><span class="token keyword">SQLSVCINSTANTFILEINIT</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; OPTIONAL SETTINGS
+
+; Specify non-default data file directory 
+; INSTALLSQLDATADIR=&quot;&quot;
+
+; Specify non-default user database data file directory 
+; SQLUSERDBDIR=&quot;&quot;
+
+; Specify non-default user database log file directory 
+; SQLUSERDBLOGDIR=&quot;&quot;
+
+; Specify non-default directory for tempdb files 
+; SQLTEMPDBDIR=&quot;&quot;
+
+; Specify non-default directory for tempdb log files 
+; SQLTEMPDBLOGDIR=&quot;&quot;
+
+; Specify non-default installation directory 
+; INSTALLSHAREDDIR=&quot;&quot;
+
+; Specify non-default backup directory 
+; SQLBACKUPDIR=&quot;&quot;
+
+; Specify non-default installation directory for 32-bit components  
+; INSTALLSHAREDWOWDIR=&quot;&quot;
+
+; Specify non-default installation directory for instance components 
+; INSTANCEDIR=&quot;&quot;
+
+; Enable run-as credentials for SQL Server Express 
+; ENABLERANU=&quot;True&quot;
+
+; Set non-default, Windows Authentication security mode 
+; SECURITYMODE=&quot;SQL&quot;
+
+; Set the default SA Password, required for SECURITYMODE=SQL
+; SAPWD = &quot;MyStrongSAPwd&quot;
+
+; Specify non-default collation 
+; SQLCOLLATION=&quot;&quot;
+
+; Specify startup mode for SQL Server: Automatic, Disabled, Manual
+; SQLSVCSTARTUPTYPE=&quot;Automatic&quot;
+
+; Specify additional SA users - current user is SA by default 
+; SQLSYSADMINACCOUNTS=&quot;&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br></div></div><h2 id="_2016-2017-2019-unattended-install"><a href="#_2016-2017-2019-unattended-install" class="header-anchor">#</a> 2016, 2017, 2019 Unattended Install</h2> <p>The newest versions of SQL Server Express have a configuration file that is
+very similar to prior versions, with the addition of two new optional parameters:</p> <h4 id="sqltempdbfilesize"><a href="#sqltempdbfilesize" class="header-anchor">#</a> SQLTEMPDBFILESIZE</h4> <p>This parameter allows the default size of all new tempdb data files to be specified
+at the time of installation. While the default for SQL Server Express is a paltry 4MB and
+all other versions are set to 8MB, customizing this value reduces the number of
+post-install steps required since most servers will require more than a few MB of
+space for the tempdb.</p> <h4 id="sqltempdblogfilesize"><a href="#sqltempdblogfilesize" class="header-anchor">#</a> SQLTEMPDBLOGFILESIZE</h4> <p>Similar to the above, the size of the tempdb log can also now be specified during
+the installation process. The defaults of 4MB and 8MB are the same, so most people
+will want to specify a larger value.</p> <p>The below sample configuration file focuses solely on the database engine installation
+and does not include other features to keep the configuration as generic as possible.</p> <div class="language-batch line-numbers-mode"><pre class="language-batch"><code>; Microsoft SQL Server Express 2016/2017 Configuration Template
+; Provided by Express Databases, LLC
+; http://expressdb.io   
+[OPTIONS]  
+; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE.  
+; This is a required parameter.  
+<span class="token command"><span class="token keyword">ACTION</span>=<span class="token string">&quot;Install&quot;</span>  </span>
+
+; Specifies features to install, uninstall, or upgrade.  
+; The list of top-level features include SQL, AS, RS, IS, and Tools.  
+; The SQL feature will install the database engine, replication, and full-text.  
+; The Tools feature will install Management Tools, Books online,   
+; SQL Server Data Tools, and other shared components.  
+<span class="token command"><span class="token keyword">FEATURES</span>=SQL,Tools  </span>
+
+; Accept license terms
+<span class="token command"><span class="token keyword">IACCEPTSQLSERVERLICENSETERMS</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Install English version if other langauge packs are available
+<span class="token command"><span class="token keyword">ENU</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Don<span class="token punctuation">'</span>t display any install UI
+<span class="token command"><span class="token keyword">QUIET</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Show progress in command line
+<span class="token command"><span class="token keyword">INDICATEPROGRESS</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; Define an Instance name
+<span class="token command"><span class="token keyword">INSTANCENAME</span>=<span class="token string">&quot;SQLEXPRESS&quot;</span></span>
+
+; Specify SQL Service account
+<span class="token command"><span class="token keyword">SQLSVCACCOUNT</span>=<span class="token string">&quot;SQLServiceAccount&quot;</span></span>
+
+; Specify SQL Service Account pwd
+<span class="token command"><span class="token keyword">SQLSVCPASSWORD</span>=<span class="token string">&quot;ChangeMe123&quot;</span></span>
+
+; Enable instant file initialization for the service account - optional 
+; Enabling this is a best practice 
+<span class="token command"><span class="token keyword">SQLSVCINSTANTFILEINIT</span>=<span class="token string">&quot;True&quot;</span></span>
+
+; OPTIONAL SETTINGS
+
+; Specify non-default data file directory 
+; INSTALLSQLDATADIR=&quot;&quot;
+
+; Specify non-default user database data file directory 
+; SQLUSERDBDIR=&quot;&quot;
+
+; Specify non-default user database log file directory 
+; SQLUSERDBLOGDIR=&quot;&quot;
+
+; Specify non-default directory for tempdb files 
+; SQLTEMPDBDIR=&quot;&quot;
+
+; Specify non-default directory for tempdb log files 
+; SQLTEMPDBLOGDIR=&quot;&quot;
+
+; Specifies initial file size of each tempdb data file. Default for SQL Server Express is 4MB, others are 8MB
+; SQLTEMPDBFILESIZE=4
+
+; Specifies initial file size the tempdb log file. Default for SQL Server Express is 4MB, others are 8MB
+; SQLTEMPDBLOGFILESIZE=4
+
+; Specify non-default installation directory 
+; INSTALLSHAREDDIR=&quot;&quot;
+
+; Specify non-default backup directory 
+; SQLBACKUPDIR=&quot;&quot;
+
+; Specify non-default installation directory for 32-bit components  
+; INSTALLSHAREDWOWDIR=&quot;&quot;
+
+; Specify non-default installation directory for instance components 
+; INSTANCEDIR=&quot;&quot;
+
+; Enable run-as credentials for SQL Server Express 
+; ENABLERANU=&quot;True&quot;
+
+; Set non-default, Win Authentication security mode 
+; SECURITYMODE=&quot;SQL&quot;
+
+; Set the default SA Password - required for SECURITYMODE=SQL
+; SAPWD = &quot;MyStrongSAPwd&quot;
+
+; Specify non-default collation 
+; SQLCOLLATION=&quot;&quot;
+
+; Specify startup mode for SQL Server: Automatic, Disabled, Manual
+; SQLSVCSTARTUPTYPE=&quot;Automatic&quot;
+
+; Specify additional SA users - current user is SA by default 
+; SQLSYSADMINACCOUNTS=&quot;&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br></div></div><h2 id="_2017-2019-unattended-install-linux"><a href="#_2017-2019-unattended-install-linux" class="header-anchor">#</a> 2017, 2019 Unattended Install Linux</h2> <p>Coming soon! See SQL CAT Team's <a href="https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/" target="_blank" rel="noopener noreferrer">Unattended install and configuration for SQL Server 2017 on Linux<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> in the mean time.</p> <h2 id="further-reading"><a href="#further-reading" class="header-anchor">#</a> Further Reading</h2> <ul><li>Microsoft's documentation <a href="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017" target="_blank" rel="noopener noreferrer">Install SQL Server from the Command Line<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>Microsoft's <a href="https://msdn.microsoft.com/library/dd239405(v=sql.120).aspx" target="_blank" rel="noopener noreferrer">Install SQL Server 2014 using a Configuration File<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>SQL CAT Team's <a href="https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/" target="_blank" rel="noopener noreferrer">Unattended install and configuration for SQL Server 2017 on Linux<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <br> <br> <!----></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.214189df.js" defer></script><script src="/assets/js/2.646f69a8.js" defer></script><script src="/assets/js/18.d9729017.js" defer></script>
+  </body>
+</html>
