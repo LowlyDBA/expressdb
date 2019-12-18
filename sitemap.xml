@@ -1,27 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://expressdb.io/</loc>
-  <lastmod>2019-12-17T20:19:10+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://expressdb.io/sql-server-express-backups.html</loc>
-  <lastmod>2019-12-17T20:19:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://expressdb.io/what-is-sql-server-express.html</loc>
-  <lastmod>2019-12-17T20:19:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
 
+    <loc>http://expressdb.io</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/what-is-sql-server-express/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-feature-comparison/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-vs-localdb/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/which-sql-server-express-version-to-use/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/which-sql-server-management-studio-version/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-database-size-limit/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-hardware-limitations/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-sp-send-dbmail/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-backups.html</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-maintenance/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-security-best-practices/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-replace-sql-agent/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-express-unattended-install/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/sql-server-resources/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/azure-data-studio/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/about/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/contact/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/what-is-sql-server-express.html</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
+
+<url>
+
+    <loc>http://expressdb.io/automation/sql-server-express-replace-sql-agent/</loc>
+
+    <lastmod>2019-12-18</lastmod>
+
+    <changefreq>monthly</changefreq>
+
+
+
+    <priority>0.5</priority>
+
+</url>  
 
 </urlset>
+      
