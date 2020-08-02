@@ -282,19 +282,5 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 
 </url>  
 
-<url>
-
-    <loc>http://expressdb.io/automation/sql-server-express-replace-sql-agent.html</loc>
-
-    <lastmod>2020-05-01</lastmod>
-
-    <changefreq>monthly</changefreq>
-
-
-
-    <priority>0.5</priority>
-
-</url>  
-
 </urlset>
       
